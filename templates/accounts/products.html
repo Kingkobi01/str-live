@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+{% block title %}Products{% endblock title %}
+
+{% block content %}
+
+
+<br>
+
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <h5>Products</h5>
+        </div>
+        <div class="container"style="display:flex;">
+        {% for product in products %}
+        <div class="card" style="width: 18rem; margin: 12px;">
+            <img src="{{product.thumbnail.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}} ${{product.price}}</h5>
+                <p class="card-text">{{product.description}}</p> <span style="margin-right: .4em;color: grey;">{{product.category}}</span>
+                <a href="#" class="btn btn-primary">Purchase</a>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+        <!-- <div class="card card-body">
+            <table class="table">
+                <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                </tr>
+                {% for product in products %}
+                <tr>
+                    <td>{{product.name}}</td>
+                    <td>{{product.category}}</td>
+                    <td>{{product.name}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div> -->
+    </div>
+
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block title %}Order{% endblock title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-body">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{form_set.management_form}}
+                {% for form in form_set %}
+                {{form}}
+                <hr>
+                {% endfor %}
+                <input class="btn btn-sm btn-success" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}

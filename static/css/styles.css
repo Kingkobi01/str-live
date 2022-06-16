@@ -1,0 +1,32 @@
+
+
+body {
+    background-color: #ebeff5;
+}
+
+a :hover{
+    text-decoration: none;
+}
+#total-orders {
+    background-color: #4cb4c7;
+}
+
+
+#orders-delivered {
+    background-color: #7abecc;
+}
+
+#orders-pending {
+    background-color: #7CD1C0;
+}
+
+footer{
+    text-align: center;
+        margin-bottom: 0;
+        
+}
+
+
+.cat{
+    
+}
